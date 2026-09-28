@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Quiz de Práticas de Enfermagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Tela Inicial -->
+        <div id="home-screen" class="card">
+            <h1>Quiz de Práticas de Enfermagem</h1>
+            <p class="subtitle">Teste os seus conhecimentos em Sinais Vitais, Glicemia Capilar, Vias de Administração e Segurança do Paciente.</p>
+            <div class="info-box">
+                <p>📋 <strong>30 Questões Práticas e Teóricas</strong></p>
+                <p>⏱️ Sem limite de tempo</p>
+                <p>💡 Explicações detalhadas a cada resposta</p>
+            </div>
+            <button id="start-btn" class="btn primary-btn">Começar Quiz</button>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <span id="question-counter">Questão 1 de 30</span>
+                <span id="score-counter">Pontos: 0</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div id="question-container">
+                <h2 id="question-text">Enunciado da questão aqui...</h2>
+                <div id="options-container" class="options-grid">
+                    <!-- Alternativas injetadas via JS -->
+                </div>
+            </div>
+
+            <div id="explanation-container" class="explanation-box hidden">
+                <h3>Explicação:</h3>
+                <p id="explanation-text"></p>
+            </div>
+
+            <button id="next-btn" class="btn primary-btn hidden">Próxima Questão</button>
+        </div>
+
+        <!-- Tela de Resultados -->
+        <div id="result-screen" class="card hidden">
+            <h1>Resultado Final</h1>
+            <div class="result-circle">
+                <span id="percentage-text">0%</span>
+            </div>
+            <p id="result-summary" class="result-summary">Você acertou 0 de 30 questões.</p>
+            <button id="restart-btn" class="btn primary-btn">Refazer Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
